@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Query</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css">
+    <style>
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: .5em;
+            font-size: 1.2em;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            width: auto;
+            padding: 10px 15px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Statistiche</h1>
+    <form method="POST" action="query1.php">
+        <p><strong>Query 1:</strong> Numero di opere realizzate in un determinato anno:<br>
+        <input type="number" id="anno" name="anno" placeholder="Inserisci anno">
+        <button type="submit"><strong>Invia</strong></button>
+    </form>
+    <form method="POST" action="query2.php">
+        <p><strong>Query 2:</strong> Numero di artisti nati e/o morti in una determinata nazione:<br>
+        <input type="text" id="luogo_di_nascita" name="luogo_di_nascita" placeholder="Inserisci luogo di nascita">
+        <input type="text" id="luogo_di_morte" name="luogo_di_morte" placeholder="Inserisci luogo di morte">
+        <button type="submit"><strong>Invia</strong></button>
+    </form>
+    <form method="POST" action="query3.php">
+        <p><strong>Query 3:</strong> Numero di opere per artista:<br>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci nome artista">
+        <button type="submit"><strong>Invia</strong></button>
+    </form>
+    <form method="POST" action="query4.php">
+        <p><strong>Query 4:</strong> Numero di opere per artisti nati in una determinata nazione:<br>
+        <input type="text" id="luogo_di_nascita" name="luogo_di_nascita" placeholder="luogo di nascita">
+        <button type="submit"><strong>Invia</strong></button>
+    </form>
+    <form method="POST" action="query5.php">
+        <p><strong>Query 5:</strong>Titoli per opere di artisti nati nello stesso anno:<br>
+        <input type="number" id="anno_di_nascita" name="anno_di_nascita" placeholder="Inserisci anno">
+        <button type="submit"><strong>Invia</strong></button>
+    </form>
+</body>
+</html>
